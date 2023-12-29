@@ -1,16 +1,31 @@
 {
   "name": "restful-api-vercel",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "This is a ready RESTful API created with the JSON Server package",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vul3vulcj8/restful-api-vercel.git"
+  },
+  "keywords": [
+    "restful",
+    "rest",
+    "api",
+    "vercel",
+    "json",
+    "server"
+  ],
+  "author": "Ivo Culic",
   "license": "ISC",
-  "dependencies": {
-    "package-lock.json": "^1.0.0"
+  "bugs": {
+    "url": "https://github.com/vul3vulcj8/restful-api-vercel/issuesl#readme"
+  },
+  "homepage": "https://github.com/vul3vulcj8/restful-api-vercel",
+  "dependencies": {},
+  "devDependencies": {
+    "json-server": "^0.17.1"
   }
 }
