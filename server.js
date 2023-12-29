@@ -16,8 +16,8 @@ server.use(
 );
 server.use(router);
 // Listen to port
-server.listen(3004, () => {
-  console.log("JSON Server is running on port 3004");
+server.listen(3000, () => {
+  console.log("JSON Server is running ");
 });
 
 // Export the Server API
