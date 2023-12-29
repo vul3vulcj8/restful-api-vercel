@@ -24,7 +24,9 @@
     "url": "https://github.com/vul3vulcj8/restful-api-vercel/issuesl"
   },
   "homepage": "https://github.com/vul3vulcj8/restful-api-vercel#readme",
-  "dependencies": {},
+  "dependencies": {
+    "vite": "^5.0.10"
+  },
   "devDependencies": {
     "json-server": "^0.17.1"
   }
