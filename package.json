@@ -2,7 +2,7 @@
   "name": "restful-api-vercel",
   "version": "1.0.0",
   "description": "This is a ready RESTful API created with the JSON Server package",
-  "main": "index.js",
+  "main": "main.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
