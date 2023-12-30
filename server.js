@@ -1,5 +1,5 @@
-import * as jsonServer from "json-server";
-import * as cors from "cors";
+const jsonServer = require("json-server");
+const cors = require("cors");
 
 const server = jsonServer.create();
 const router = jsonServer.router("db/db.json");
@@ -7,7 +7,7 @@ const router = jsonServer.router("db/db.json");
 const middlewares = jsonServer.defaults();
 
 // 使用 cors 中间件
-server.use(cors());
+server.use(cors({ origin: "http://localhost:3000" }));
 
 server.use(middlewares);
 server.use(
