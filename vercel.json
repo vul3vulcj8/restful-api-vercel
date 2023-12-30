@@ -10,22 +10,6 @@
     }
   ],
 
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/",
-      "hook": "wait"
-    }
-  ],
-  "hooks": {
-    "wait": {
-      "type": "wait",
-      "value": {
-        "duration": 1500
-      }
-    }
-  },
-
   "routes": [
     {
       "src": "/(.*)",
