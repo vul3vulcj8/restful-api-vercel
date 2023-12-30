@@ -1,13 +1,12 @@
-const jsonServer = require("json-server");
-const cors = require("cors"); // 引入 cors 中间件
+import * as jsonServer from "json-server";
+import * as cors from "cors";
 
 const server = jsonServer.create();
 const router = jsonServer.router("db/db.json");
 
-const middlewares = jsonServer.defaults();
-
 // 使用 cors 中间件
 server.use(cors());
+server.use(jsonServer.defaults());
 
 server.use(middlewares);
 server.use(
@@ -16,9 +15,10 @@ server.use(
   })
 );
 server.use(router);
+const port = process.env.PORT || 3000;
 
-server.listen(YourPort, () => {
-  console.log(`Server is running on port ${YourPort}`);
+server.listen(port, () => {
+  console.log(`JSON Server is running on port ${port}`);
 });
 
 module.exports = server;
