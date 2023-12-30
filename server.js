@@ -1,8 +1,9 @@
-const jsonServer = require("json-server");
-const cors = require("cors");
+import jsonServer from "json-server";
+
+// 創建 json-server 實例
 
 const server = jsonServer.create();
-const router = jsonServer.router("db/db.json");
+import router from "db/db.json";
 
 const middlewares = jsonServer.defaults();
 
