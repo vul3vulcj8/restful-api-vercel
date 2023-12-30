@@ -11,13 +11,13 @@ server.use((_req, res, next) => {
   res.set("Cache-Control", "no-store");
   setTimeout(next, 1500);
 });
-
-server.use(middlewares);
+const basePath = "/IG-works";
+server.use(basePath, middlewares);
 // Add this before server.use(router)
 server.use(
   // Add custom route here if needed
   jsonServer.rewriter({
-    "/api/*": "/$1",
+    [`${basePath}/api/*`]: "/$1",
   })
 );
 
