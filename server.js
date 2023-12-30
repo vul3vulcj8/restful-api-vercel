@@ -1,11 +1,15 @@
 // JSON Server module
 const jsonServer = require("json-server");
-const delayedResponse = require("express-delayed-response");
+
 const server = jsonServer.create();
 const router = jsonServer.router("db/db.json");
 
 // Make sure to use the default middleware
 const middlewares = jsonServer.defaults();
+
+server.use((req, res, next) => {
+  setTimeout(next, 1500);
+});
 
 server.use(middlewares);
 // Add this before server.use(router)
@@ -15,7 +19,7 @@ server.use(
     "/api/*": "/$1",
   })
 );
-server.use(delayedResponse({ delay: 1500 }));
+
 server.use(router);
 // Listen to port
 server.listen(3000, () => {
