@@ -26,6 +26,7 @@
   "homepage": "https://github.com/vul3vulcj8/restful-api-vercel#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "express-delayed-response": "^0.4.1",
     "vite": "^5.0.10"
   },
   "devDependencies": {

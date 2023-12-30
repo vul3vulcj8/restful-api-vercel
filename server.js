@@ -1,5 +1,6 @@
 // JSON Server module
 const jsonServer = require("json-server");
+const delayedResponse = require("express-delayed-response");
 const server = jsonServer.create();
 const router = jsonServer.router("db/db.json");
 
@@ -14,6 +15,7 @@ server.use(
     "/api/*": "/$1",
   })
 );
+server.use(delayedResponse({ delay: 1500 }));
 server.use(router);
 // Listen to port
 server.listen(3000, () => {
