@@ -5,8 +5,6 @@ import cors from "cors";
 const server = jsonServer.create();
 import router from "db/db.json";
 
-const middlewares = jsonServer.defaults();
-
 // 使用 cors 中间件
 server.use(cors());
 server.use(middlewares);
