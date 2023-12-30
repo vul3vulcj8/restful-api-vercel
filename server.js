@@ -1,5 +1,5 @@
 import jsonServer from "json-server";
-
+const cors = require("cors");
 // 創建 json-server 實例
 
 const server = jsonServer.create();
@@ -8,7 +8,7 @@ import router from "db/db.json";
 const middlewares = jsonServer.defaults();
 
 // 使用 cors 中间件
-
+server.use(cors());
 server.use(middlewares);
 server.use(
   jsonServer.rewriter({
