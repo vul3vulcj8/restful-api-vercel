@@ -4,9 +4,10 @@ import * as cors from "cors";
 const server = jsonServer.create();
 const router = jsonServer.router("db/db.json");
 
+const middlewares = jsonServer.defaults();
+
 // 使用 cors 中间件
 server.use(cors());
-server.use(jsonServer.defaults());
 
 server.use(middlewares);
 server.use(
@@ -15,10 +16,9 @@ server.use(
   })
 );
 server.use(router);
-const port = process.env.PORT || 3000;
 
-server.listen(port, () => {
-  console.log(`JSON Server is running on port ${port}`);
+server.listen(3000, () => {
+  console.log("JSON Server is running");
 });
 
 module.exports = server;
