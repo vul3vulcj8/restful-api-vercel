@@ -9,6 +9,23 @@
       }
     }
   ],
+
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*",
+      "hook": "wait"
+    }
+  ],
+  "hooks": {
+    "wait": {
+      "type": "wait",
+      "value": {
+        "duration": 1500
+      }
+    }
+  },
+
   "routes": [
     {
       "src": "/(.*)",
