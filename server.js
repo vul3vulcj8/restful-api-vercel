@@ -8,7 +8,6 @@ import router from "db/db.json";
 const middlewares = jsonServer.defaults();
 
 // 使用 cors 中间件
-server.use(cors({ origin: "http://localhost:3000" }));
 
 server.use(middlewares);
 server.use(
