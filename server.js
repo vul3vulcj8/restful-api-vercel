@@ -7,7 +7,8 @@ const router = jsonServer.router("db/db.json");
 // Make sure to use the default middleware
 const middlewares = jsonServer.defaults();
 
-server.use((req, res, next) => {
+server.use((_req, res, next) => {
+  res.set("Cache-Control", "no-store");
   setTimeout(next, 1500);
 });
 
