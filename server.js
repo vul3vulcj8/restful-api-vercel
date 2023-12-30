@@ -1,5 +1,5 @@
 import jsonServer from "json-server";
-const cors = require("cors");
+import cors from "cors";
 // 創建 json-server 實例
 
 const server = jsonServer.create();
